@@ -1,0 +1,16 @@
+:doctype: book
+:tags: [rest,data,react,security]
+:projects: [spring-data-jpa,spring-hateoas,spring-security,spring-boot,spring-oauth]
+:toc: left
+:icons: font
+:source-highlighter: prettify
+:image-width: 500
+
+:app-name: Expenses 360 App
+
+
+# Welcome to {app-name}!
+
+This tutorial shows steps to build an Expense Management app using Java, spring boot, Thymeleaf. Also, we will secure it using spring security form login.
+
+include::1.adoc[leveloffset=+1]

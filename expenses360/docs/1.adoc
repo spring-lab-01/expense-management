@@ -1,0 +1,5 @@
+
+## What is {app-name}?
+
+- **Track Your Expenses**: Keep a record of all your purchases, bills, and other expenses. No more wondering where your money went!
+

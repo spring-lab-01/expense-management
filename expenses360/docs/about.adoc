@@ -1,0 +1,15 @@
+:app-name: Expense 360 App
+
+# Welcome to  {app-name}!
+
+**Take control of your finances with {app-name}!**
+
+## Why {app-name}?
+
+- **Track Your Expenses**: Keep a record of all your purchases, bills, and other expenses. No more wondering where your money went!
+- **Budget Planning**: Set monthly or weekly budgets for different categories like groceries, entertainment, and more. Stay within your limits and save more!
+- **Insightful Reports**: Get detailed reports on your spending habits. Find out what you're spending the most on and where you can cut back.
+- **Real-Time Updates**: Your expenses are updated in real time, so you always have the most current information at your fingertips.
+- **Secure and Private**: Your data is encrypted and stored securely. We respect your privacy and never share your information.
+
+Join us today and start managing your expenses like a pro!

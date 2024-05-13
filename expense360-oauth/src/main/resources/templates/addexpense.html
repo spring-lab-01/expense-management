@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <th:block th:replace="fragments/header.html :: common-header"/>
+</head>
+<body>
+<div th:insert="fragments/header.html :: header"/>
+<div class="container-fluid">
+    <h4>Add Expense </h4>
+    <form action="#" th:action="@{/addexpense}"
+          th:object="${expense}" method="post">
+    <table class="table table-striped">
+        <tr hidden="true">
+            <td> Id </td>
+            <td> <input type="text" th:field="${expense.id}"> </td>
+        </tr>
+        <tr>
+            <td> Expense </td>
+            <td> <input type="text" th:field="${expense.description}"> </td>
+        </tr>
+        <tr>
+            <td> Category </td>
+            <td> <input type="text" th:field="${expense.category}"> </td>
+        </tr>
+        <tr>
+            <td> Amount</td>
+            <td> <input type="number" step=".01" th:field="${expense.amount}"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit" name="add"> Add </button>
+            </td>
+        </tr>
+    </table>
+    </form>
+</div>
+</body>
+</html>

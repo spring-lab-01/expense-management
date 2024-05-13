@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <th:block th:replace="fragments/header.html :: common-header"/>
+</head>
+<body>
+<div th:insert="fragments/header.html :: header"/>
+<div class="container-fluid">
+    <h4>Users List </h4>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>#</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Role</th>
+        </tr>
+        </thead>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.password}"></td>
+            <td th:text="${user.role}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

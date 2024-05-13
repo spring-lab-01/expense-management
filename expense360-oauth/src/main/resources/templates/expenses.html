@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <th:block th:replace="fragments/header.html :: common-header"/>
+</head>
+<body>
+<div th:insert="fragments/header.html :: header"/>
+<div class="container-fluid">
+    <div class="bg-warning">
+        <h4 th:align="center">Month -
+            <th:block th:text="${duration}"/>
+            Total Expense -
+            <th:block th:text="${totalExpense}"/>
+        </h4>
+    </div>
+
+    <button> <a th:href="@{/addexpenseview}"> Add Expense </a></button>
+    <form action="#" th:action="@{/addexpense}" method="post">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>#</th>
+            <th>Expense</th>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>User #</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tr th:each="expense, row : ${expenses}">
+            <td th:text="${expense.id}"></td>
+            <td th:text="${expense.description}"></td>
+            <td th:text="${expense.category}"></td>
+            <td th:text="${expense.amount}"></td>
+            <td th:text="${expense.userId}"></td>
+            <td>
+                <button type="submit" name="edit"
+                        th:value="*{expenses[__${row.index}__].id}">Edit</button>
+                <button type="submit" name="delete"
+                        th:value="*{expenses[__${row.index}__].id}">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
