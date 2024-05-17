@@ -64,8 +64,7 @@ public class WebSecurityConfig {
                                 .successHandler((request, response, authentication) -> {
                                             System.out.println("On default success Handler ------------ ***************** ");
                                             DefaultOidcUser defaultOidcUser = (DefaultOidcUser) authentication.getPrincipal();
-                                            System.out.println(defaultOidcUser);
-                                            System.out.println("context user -- " + SecurityContextHolder.getContext().getAuthentication());
+                                            oAuthUsersService.saveUserAfterOAuth2Authentication(defaultOidcUser);
                                             response.sendRedirect("/");
                                         }
                                 ))

@@ -73,4 +73,16 @@ public class AppUser{
     public void setFullname(String fullname) {
         this.fullname = fullname;
     }
+
+    @Override
+    public String toString() {
+        return "AppUser{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", role='" + role + '\'' +
+                ", fullname='" + fullname + '\'' +
+                '}';
+    }
 }
