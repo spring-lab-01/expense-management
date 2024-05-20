@@ -6,7 +6,7 @@
 <body class="article" th:fragment="home">
 <div sec:authorize="!isAuthenticated()">
     <li class="nav-item">
-        <a class="nav-link" th:href="@{/login}">Login</a>
+        <h3><a class="nav-link" th:href="@{/login}">Login</a></h3>
     </li>
 </div>
 <div id="header">

@@ -24,7 +24,6 @@
             <th>Expense</th>
             <th>Category</th>
             <th>Amount</th>
-            <th>User #</th>
             <th>Action</th>
         </tr>
         </thead>
@@ -33,7 +32,6 @@
             <td th:text="${expense.description}"></td>
             <td th:text="${expense.category}"></td>
             <td th:text="${expense.amount}"></td>
-            <td th:text="${expense.userId}"></td>
             <td>
                 <button type="submit" name="edit"
                         th:value="*{expenses[__${row.index}__].id}">Edit</button>

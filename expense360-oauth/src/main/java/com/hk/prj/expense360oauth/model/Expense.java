@@ -20,27 +20,27 @@ public class Expense {
     @Nonnull
     private Double amount;
     private LocalDateTime expenseTime;
-    private long userId;
+    private String email;
 
-    public Expense(long id, String category, String description, Double amount, LocalDateTime expenseTime, long userId) {
+    public Expense(long id, String category, String description, Double amount, LocalDateTime expenseTime, String email) {
         this.id = id;
         this.category = category;
         this.description = description;
         this.amount = amount;
         this.expenseTime = expenseTime;
-        this.userId = userId;
+        this.email = email;
     }
 
     public Expense(){
 
     }
 
-    public long getUserId() {
-        return userId;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUserId(long userId) {
-        this.userId = userId;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public long getId() {

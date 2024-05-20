@@ -3,23 +3,26 @@ package com.hk.prj.expense360oauth.service;
 import com.hk.prj.expense360oauth.exception.ResourceNotFoundException;
 import com.hk.prj.expense360oauth.model.Expense;
 import com.hk.prj.expense360oauth.repository.ExpenseRepository;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
 public class ExpenseService {
 
     private final ExpenseRepository expenseRepository;
+    private final UserService userService;
 
-    public ExpenseService(ExpenseRepository expenseRepository){
+    public ExpenseService(ExpenseRepository expenseRepository, UserService userService){
         this.expenseRepository = expenseRepository;
+        this.userService = userService;
     }
 
     public List<Expense> getExpensesByUser(){
-        //todo - get expenses by user
-        return expenseRepository.findAll();
+        return expenseRepository.findAllByEmailIgnoreCase(userService.getLoggedInUserEmail());
     }
     public Expense getExpensesByUser(long id){
         //todo - get expenses by user
@@ -28,6 +31,7 @@ public class ExpenseService {
     }
 
     public void save(Expense expense) {
+        expense.setEmail(userService.getLoggedInUserEmail());
         expenseRepository.save(expense);
     }
 
