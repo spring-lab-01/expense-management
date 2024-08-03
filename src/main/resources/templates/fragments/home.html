@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head th:fragment="home">
+
+</head>
+<body class="article" th:fragment="home">
+<div sec:authorize="!isAuthenticated()">
+    <li class="nav-item">
+        <h3><a class="nav-link" th:href="@{/login}">Login</a></h3>
+    </li>
+</div>
+<div id="header">
+    <h1>Welcome to Expense 360 App!</h1>
+</div>
+<div id="content">
+    <div id="preamble">
+        <div class="sectionbody">
+            <div class="paragraph">
+                <p><strong>Take control of your finances with Expense 360 App!</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="sect1">
+        <h2 id="_why_expense_360_app">Why Expense 360 App?</h2>
+        <div class="sectionbody">
+            <div class="ulist">
+                <ul>
+                    <li>
+                        <p><strong>Track Your Expenses</strong>: Keep a record of all your purchases, bills, and other expenses. No more wondering where your money went!</p>
+                    </li>
+                    <li>
+                        <p><strong>Budget Planning</strong>: Set monthly or weekly budgets for different categories like groceries, entertainment, and more. Stay within your limits and save more!</p>
+                    </li>
+                    <li>
+                        <p><strong>Insightful Reports</strong>: Get detailed reports on your spending habits. Find out what you&#8217;re spending the most on and where you can cut back.</p>
+                    </li>
+                    <li>
+                        <p><strong>Real-Time Updates</strong>: Your expenses are updated in real time, so you always have the most current information at your fingertips.</p>
+                    </li>
+                    <li>
+                        <p><strong>Secure and Private</strong>: Your data is encrypted and stored securely. We respect your privacy and never share your information.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="paragraph">
+                <p>Join us today and start managing your expenses like a pro!</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

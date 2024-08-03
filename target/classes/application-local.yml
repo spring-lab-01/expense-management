@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: expense360-oauth
+  datasource:
+    url: jdbc:postgresql://localhost:5432/expense_management
+    username: user
+    password: password
+    driverClassName: org.postgresql.Driver
+  jpa:
+    database: postgresql
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: dummy
+            client-secret: dummy
+  h2:
+    console:
+      enabled: true
+
+
