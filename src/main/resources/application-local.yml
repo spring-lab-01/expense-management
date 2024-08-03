@@ -16,8 +16,5 @@ spring:
           google:
             client-id: dummy
             client-secret: dummy
-  h2:
-    console:
-      enabled: true
 
 
