@@ -17,7 +17,7 @@
   
 ## Database Setup 
  - Create a local postgres database with name - *expense_management*
- - Run [db script](./src/main/resources/db/schema.sql)
+ - Run [db script](./src/main/resources/db/postgres/schema.sql)
    - Add VM Arguments for db username and password 
      ```
       -Dspring.datasource.username=REPLACE_ME
@@ -32,6 +32,11 @@
     -Dspring.security.oauth2.client.registration.google.client-id=REPLACE_ME
     -Dspring.security.oauth2.client.registration.google.client-secret=REPLACE_ME
     ```
-
+    
 ### VM Arguments add sample for intellij IDE
 ![](docs/vm-arguments.png)
+
+
+## Containerization
+ - [Dockerfile](Dockerfile)
+ - [Containerization Reference](https://docs.docker.com/language/java/)
