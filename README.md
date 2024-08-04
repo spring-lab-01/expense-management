@@ -1,19 +1,20 @@
 # Expenses 360
 
-- Manage Your expenses (Add/Edit/Delete) by Month
+- Manage Your expenses by Month
 
 ## Tech Stack
-- Thymeleaf (UI) - 3.1.2
-- Java 17
-- Springboot 3.2.5
+- Thymeleaf
+- Java 21
+- Springboot 3.3.2
 - Postgres
 - Google OAuth
 
 ## Prerequisite Installation
-- [Java 17](https://www.oracle.com/java/technologies/downloads/#java17) 
-- [Postgres](https://www.postgresql.org/download/)
-  - Postgres can be run via docker as well - [Steps](docs/postgres-steps.md)
-- 
+- [Java 21](https://www.oracle.com/java/technologies/downloads/#java21) 
+- Postgres
+  - Download and install from https://www.postgresql.org/download/ 
+  - Alternatively, Postgres can be run via docker - [Steps](docs/postgres-steps.md)
+  
 ## Database Setup 
  - Create a local postgres database with name - *expense_management*
  - Run [db script](./src/main/resources/db/schema.sql)
