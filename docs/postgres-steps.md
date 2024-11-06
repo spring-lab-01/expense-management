@@ -13,4 +13,8 @@ psql -h localhost -p 5432 -U postgres
 
 ### psql commands
 \l - list all database
+
 \c <database_name> - connect to a database
+
+### Create database if not available
+create database expense_management;

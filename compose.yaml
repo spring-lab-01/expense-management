@@ -4,38 +4,5 @@ services:
       context: .
     ports:
       - 8080:8080
-    env_file:
-      - .env/server.env
     environment:
-      - POSTGRES_URL=jdbc:postgresql://db:5432/expense_management
-      - spring.profiles.active=local
-    depends_on:
-      db:
-        condition: service_healthy
-
-  db:
-    image: postgres
-    restart: always
-    volumes:
-      - db-data:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_DB=expense_management
-      - POSTGRES_USER=/run/secrets/db_user
-      - POSTGRES_PASSWORD=/run/secrets/db_password
-    secrets:
-      - db_user
-      - db_password
-    ports:
-      - 5432:5432
-    healthcheck:
-      test: [ "CMD", "pg_isready", "-U", "postgres" ]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-volumes:
-  db-data:
-secrets:
-  db_password:
-    file: .env/db_password.txt
-  db_user:
-    file: .env/db_user.txt
+      - POSTGRES_URL=jdbc:postgresql://localhost:5432/em_db
