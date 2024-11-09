@@ -1,4 +1,4 @@
-:app-name: Expense 360 App
+:app-name: Expenses Management App
 
 # Welcome to  {app-name}!
 
