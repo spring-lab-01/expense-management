@@ -25,9 +25,13 @@
  - Step 1: Add GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET from Pre-requisite steps to file [oauth.txt](oauth.txt)
  - Step 2. Run command in terminal inside expense-management folder
 ```bash
-docker compose up --build
+docker compose up --build -d
 ```   
-
+ - Step 3. Verify at - http://localhost:8080
+ - Step 4. Delete containers - 
+``` 
+docker compose down
+```
 ## Containerization References
 - [Dockerfile](Dockerfile)
 - [Docker Tutorial Guide](https://docs.docker.com/language/java/)
